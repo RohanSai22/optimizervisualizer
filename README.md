@@ -66,47 +66,6 @@ To run this project locally:
    - Observe the impact of optimizer settings on model training through interactive plots.
   
 
-Each optimizer is defined by a mathematical update rule that adjusts model parameters (\(\theta\)) to minimize the loss function (\(J(\theta)\)).
-
-1. **SGD**: Basic gradient descent with a constant learning rate.  
-   \[
-   \theta_{t+1} = \theta_t - \eta \nabla_\theta J(\theta)
-   \]
-
-2. **Momentum**: Adds momentum to smooth updates and overcome oscillations.
-   \[
-   v_t = \beta v_{t-1} + (1 - \beta) \nabla_\theta J(\theta), \quad \theta_{t+1} = \theta_t - \eta v_t
-   \]
-
-3. **Nesterov Accelerated Gradient (NAG)**: Looks ahead before calculating the gradient.
-   \[
-   v_t = \beta v_{t-1} + \eta \nabla_\theta J(\theta - \beta v_{t-1})
-   \]
-
-4. **RMSProp**: Scales learning rates based on recent gradient magnitudes.
-   \[
-   G_t = \beta G_{t-1} + (1 - \beta)(\nabla_\theta J(\theta))^2, \quad \theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \nabla_\theta J(\theta)
-   \]
-
-5. **AdaGrad**: Adjusts learning rates based on the cumulative gradient history.
-   \[
-   \theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \nabla_\theta J(\theta)
-   \]
-
-6. **Adam**: Combines momentum and RMSProp for adaptive learning rates.
-   \[
-   m_t = \beta_1 m_{t-1} + (1 - \beta_1) \nabla_\theta J(\theta), \quad v_t = \beta_2 v_{t-1} + (1 - \beta_2)(\nabla_\theta J(\theta))^2
-   \]
-   \[
-   \hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}, \quad \theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
-   \]
-
-7. **AdamW**: Combines Adam with weight decay to prevent overfitting.
-   \[
-   \theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t - \lambda \theta_t
-   \]
-
-
 ## Folder Structure
 
 ```
