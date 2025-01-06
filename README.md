@@ -43,7 +43,7 @@ To run this project locally:
 
 3. Launch the application:
    ```bash
-   streamlit run app.py
+   streamlit run streamlit_app.py
    ```
 
 4. Access the app locally at `http://localhost:8501`.
