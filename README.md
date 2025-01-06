@@ -32,7 +32,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/optimizer-visualizer.git
+   git clone https://github.com/RohanSai22/optimizervisualizer
    cd optimizer-visualizer
    ```
 
